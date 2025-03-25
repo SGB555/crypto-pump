@@ -12,10 +12,12 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { LogOut, User, Wallet } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 export function AuthButtons() {
   const { login, logout, authenticated, user, connectWallet, ready } = usePrivy()
   const { wallets } = useWallets()
+  const router = useRouter()
 
   // If Privy is not ready yet, show loading state
   if (!ready) {
@@ -61,7 +63,7 @@ export function AuthButtons() {
           <DropdownMenuContent className="w-56" align="end">
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={() => router.push(`/profile/${user.id}`)}>
               <User className="mr-2 h-4 w-4" />
               <span>Profile</span>
             </DropdownMenuItem>
