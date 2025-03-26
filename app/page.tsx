@@ -6,6 +6,7 @@ import { TrendingUp, Info, ArrowRight } from "lucide-react"
 import { CoinCard } from "@/components/coin-card"
 import { HowItWorks } from "@/components/how-it-works"
 import { AuthButtons } from "@/components/auth-buttons"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -13,8 +14,13 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <header className="flex items-center justify-between mb-8">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-6">
             <h1 className="text-2xl font-bold text-green-400">crypto.pump</h1>
+            <nav className="hidden md:flex items-center space-x-4 text-sm">
+              <Link href="/landing" className="text-gray-400 hover:text-white transition-colors">
+                Landing Page
+              </Link>
+            </nav>
           </div>
           <AuthButtons />
         </header>
@@ -158,4 +164,3 @@ export default function Home() {
     </main>
   )
 }
-

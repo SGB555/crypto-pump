@@ -1,0 +1,28 @@
+{
+  "name": "CryptoPump",
+  "short_name": "CryptoPump",
+  "description": "Batch Copy Trade Top Addresses in 1 Click",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#040830",
+  "theme_color": "#040830",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ]
+}
